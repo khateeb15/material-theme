@@ -267,12 +267,15 @@
     "tab_height": 54,
     "mouse_wheel_switch": false
   },
+
   {
     "class": "tabset_control",
     "settings": ["mouse_wheel_switches_tabs", "!enable_tab_scrolling"],
     "mouse_wheel_switch": true
   },
+
     // Tabs
+
   {
     "class": "tab_control",
 
