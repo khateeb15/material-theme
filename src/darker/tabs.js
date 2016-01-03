@@ -7,7 +7,7 @@
     "class": "tabset_control",
 
     "layer0.opacity": 1.0,
-    "layer0.tint": [33, 250, 33],
+    "layer0.tint": [33, 33, 33],
     "tint_index": 1,
     "layer0.inner_margin": [2, 6],
     "layer0.opacity": 1.0,
