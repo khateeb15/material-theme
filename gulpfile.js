@@ -1,6 +1,6 @@
 //
-//  Jelly Frontend Framework
-//  Developed with love by Mattia Astorino and some awesome peoples
+//  Sublime Text theme compiler
+//  Developed with love by Mattia Astorino
 //
 //  Licensed under the MIT License
 //  https://www.apache.org/licenses/LICENSE-2.0
@@ -15,23 +15,21 @@ var notifyLogo      = './icon.png';
 
 
 // Modules loader
-var gulp        = require( 'gulp'),
+var gulp        = require( 'gulp' ),
     path        = require( 'path' ),
-    duration    = require('gulp-duration'),
-    gutil       = require('gulp-util'),
-    clean       = require('gulp-clean'),
+    duration    = require( 'gulp-duration' ),
+    gutil       = require( 'gulp-util' ),
+    clean       = require( 'gulp-clean' ),
     runSequence = require( 'run-sequence' ),
-    concat_json = require("gulp-concat-json"),
-    rename      = require('gulp-rename'),
-    concat      = require('gulp-concat-json2js'),
-    wrap        = require('gulp-wrap'),
+    concat_json = require( "gulp-concat-json" ),
+    rename      = require( 'gulp-rename' ),
+    concat      = require( 'gulp-concat-json2js' ),
+    wrap        = require( 'gulp-wrap' ),
     notify      = require( 'gulp-notify' );
 
 
 // Theme builder
 // #############################################################################
-
-
 
 
 gulp.task('themeBuilder', function () {
@@ -41,10 +39,11 @@ gulp.task('themeBuilder', function () {
  .pipe( rename({ extname: ".sublime-theme" }) )
  .pipe(gulp.dest('./'))
  .pipe( notify({
-    title: "Material Theme compiled",
-    message: "Material Theme compiled",
+    title: "Material Theme",
+    message: "Theme compiled",
     icon: path.join( __dirname, notifyLogo )
   }))
+ .pipe(duration('Building theme'))
 })
 
 
