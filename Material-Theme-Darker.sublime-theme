@@ -3077,6 +3077,83 @@
       "class": "sidebar_tree",
       "settings": ["material_theme_compact_sidebar"],
       "row_padding": [24, 5]
+    },
+
+    // tinted statusbar
+    {
+      "class": "tabset_control",
+      "settings": ["material_theme_tint_tabset"],
+      "layer0.tint": [0, 150, 136],
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "tab_control",
+      "settings": ["material_theme_tint_tabset"],
+      "layer0.tint": [0, 150, 136],
+      "layer0.opacity": 1.0,
+
+      "layer1.texture": "Material Theme/assets/commons/tab_current_alt.png",
+      "layer1.opacity": 0.0,
+
+      "layer2.tint": [255, 255, 255, 0],
+      "layer2.opacity": { "target": 0.0, "speed": 3.0, "interpolation": "smoothstep" },
+
+      "layer3.inner_margin": [0, 0],
+      "layer3.opacity": { "target": 0.0, "speed": 2.0, "interpolation": "smoothstep" },
+      "layer3.texture": {
+              "keyframes":
+              [
+                "Material Theme/assets/darker/tab_animation1.png",
+                "Material Theme/assets/darker/tab_animation2.png",
+                "Material Theme/assets/darker/tab_animation3.png",
+                "Material Theme/assets/darker/tab_animation4.png",
+                "Material Theme/assets/darker/tab_animation5.png",
+                "Material Theme/assets/darker/tab_animation6.png",
+                "Material Theme/assets/darker/tab_animation7.png",
+                "Material Theme/assets/darker/tab_animation8.png",
+                "Material Theme/assets/darker/tab_animation9.png",
+                "Material Theme/assets/darker/tab_animation10.png",
+                "Material Theme/assets/darker/tab_animation11.png",
+                "Material Theme/assets/darker/tab_animation12.png",
+                "Material Theme/assets/darker/tab_animation13.png"
+              ],
+              "loop": false,
+              "frame_time": 0.015,
+      },
+
+      "content_margin": [18, 12, 11, 4],
+      "max_margin_trim": 0,
+      "hit_test_level": 0.4
+    },
+
+     // Selected current tab
+
+    {
+      "class": "tab_control", "attributes": ["selected"],
+      "settings": ["material_theme_tint_tabset"],
+      "layer1.opacity": 1.0,
+      "layer2.opacity": 0.0,
+      "layer3.opacity": 0.0
+    },
+
+      // Hovered current tab
+
+    {
+      "class": "tab_control", "attributes": ["hover"],
+      "settings": ["material_theme_tint_tabset"],
+      "layer1.opacity": 1.0,
+      "layer2.opacity": { "target": 0.6, "speed": 5.0, "interpolation": "smoothstep" },
+      "layer3.opacity": { "target": 0.0, "speed": 2.0, "interpolation": "smoothstep" }
+    },
+
+      // Selected current tab
+
+    {
+      "class": "tab_control", "attributes": ["selected","hover"],
+      "settings": ["material_theme_tint_tabset"],
+      "layer1.opacity": 1.0,
+      "layer2.opacity": { "target": 0.6, "speed": 5.0, "interpolation": "smoothstep" },
+      "layer3.opacity": 0.0
     }
 
 ]
