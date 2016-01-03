@@ -60,7 +60,7 @@ gulp.task( 'build-clean', function () {
 // #############################################################################
 
 gulp.task( 'watch', function() {
-    gulp.watch( srcPath + '/**/*.json', [ 'builder' ] );
+    gulp.watch( srcPath + '/**/*.js', [ 'builder' ] );
 });
 
 
