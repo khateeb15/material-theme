@@ -3,5 +3,4 @@ material-palette.less
 node_modules/
 gulpfile.js
 package.json
-src/
 bkp/
