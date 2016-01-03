@@ -34,20 +34,7 @@ var gulp        = require( 'gulp' ),
 
 gulp.task('themeBuilder', function () {
 
-  gulp.src('./src/Material-Theme-Darker.json')
- .pipe(concat())
- .pipe(wrap('[\r\n <%= contents %> \r\n]'))
- .pipe(rename({ extname: ".sublime-theme" }) )
- .pipe(gulp.dest('./'))
- .pipe(notify({
-    title: "Material Theme",
-    message: "Theme compiled",
-    icon: path.join( __dirname, notifyLogo )
-  }))
- .pipe(duration('Building theme'))
-
-
-  gulp.src('./src/Material-Theme.json')
+  gulp.src('./src/**.json')
  .pipe(concat())
  .pipe(wrap('[\r\n <%= contents %> \r\n]'))
  .pipe(rename({ extname: ".sublime-theme" }) )
